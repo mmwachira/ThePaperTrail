@@ -2179,8 +2179,8 @@ MonoBehaviour:
     just a distraction from a far bigger scheme?\n\nThe Paper Trail Ghost strikes
     again?\_Stay\_tuned."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1dcf382f6ef016140b3ed9de6c6ac68d, type: 2}
+  m_sharedMaterial: {fileID: 5469629039375335618, guid: 1dcf382f6ef016140b3ed9de6c6ac68d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2204,8 +2204,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2338,8 +2338,8 @@ MonoBehaviour:
     the same evening. \u201CJust school stuff,\u201D she said. Police confirmed she
     is not a suspect.\n\nStay safe, neighbors. Let\u2019s bring\_our\_relic\_home."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4c2404ea79310aa48ac61b9077c34abe, type: 2}
+  m_sharedMaterial: {fileID: -1839227585655917439, guid: 4c2404ea79310aa48ac61b9077c34abe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2363,14 +2363,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4288,7 +4288,7 @@ GameObject:
   - component: {fileID: 621005319}
   - component: {fileID: 621005318}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Article
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4308,8 +4308,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1189987724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.24, y: 0.12}
-  m_AnchorMax: {x: 0.41, y: 0.45}
+  m_AnchorMin: {x: 0.245, y: 0.12}
+  m_AnchorMax: {x: 0.405, y: 0.45}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4348,8 +4348,8 @@ MonoBehaviour:
     Who knew about the painting\u2019s placement? Who had the access and know-how?
     Could we be facing\_a\_serial\_thief?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6245ba75f2f90643b63d81feefa91a3, type: 2}
+  m_sharedMaterial: {fileID: -5964092787753651846, guid: d6245ba75f2f90643b63d81feefa91a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4373,14 +4373,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 10.5
+  m_fontSizeBase: 10.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7251,7 +7251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1189987724
 RectTransform:
   m_ObjectHideFlags: 0
