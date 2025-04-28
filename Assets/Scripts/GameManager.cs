@@ -3,20 +3,16 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
-public class UIManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static UIManager Instance;
+    public static GameManager Instance;
 
     public Animator frontPageAnimator;
     public GameObject frontPage;
     public GameObject newsPanel1;
-    //public GameObject newsPanel2;
     public GameObject cluePopupPanel;
     public TMP_Text cluePopupText;
     public GameObject deductionPanel;
-    public GameObject hintPanel;
-    public TMP_Text hintText;
-    public GameObject winPanel;
     public GameObject startButton;
 
     void Awake()
@@ -26,10 +22,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        // cluePopupPanel.SetActive(false);
-        // deductionPanel.SetActive(false);
-        // hintPanel.SetActive(false);
-        // winPanel.SetActive(false);
+
         frontPage.SetActive(true);
 
         StartCoroutine(ShowStartButton(2f)); // Show start button after 2 seconds
@@ -50,16 +43,6 @@ public class UIManager : MonoBehaviour
         deductionPanel.SetActive(true);
     }
 
-    public void ShowHint(string message)
-    {
-        hintText.text = message;
-        hintPanel.SetActive(true);
-    }
-
-    public void ShowWin()
-    {
-        winPanel.SetActive(true);
-    }
 
     public IEnumerator ShowStartButton(float delay)
     {
