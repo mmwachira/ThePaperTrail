@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class NewspaperManager : MonoBehaviour
 {
+    public StickyNote stickyNote; // Reference to the StickyNote script
+
     [Header("Newspaper GameObjects")]
     public GameObject[] newspapers; // Drag and drop your 4 newspapers here
 
@@ -26,6 +28,11 @@ public class NewspaperManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             ToggleNotepad();
+        }
+        if (stickyNote.clueOpened == true)
+        {
+            UnlockNextNewspaper(); // Unlock next newspaper when clue is opened
+            stickyNote.clueOpened = false; // Reset the clueOpened state
         }
     }
 
@@ -66,6 +73,15 @@ public class NewspaperManager : MonoBehaviour
         for (int i = 0; i < newspapers.Length; i++)
         {
             newspapers[i].SetActive(i == currentPhase);
+        }
+    }
+
+    private void UnlockNextNewspaper()
+    {
+        if (currentPhase < newspapers.Length - 1)
+        {
+            currentPhase++;
+            ActivateOnlyCurrentNewspaper();
         }
     }
 
