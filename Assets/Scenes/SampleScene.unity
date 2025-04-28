@@ -427,9 +427,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1189987724}
     m_Modifications:
+    - target: {fileID: 4658964055815313436, guid: 101c0c212f3758747babf68d048429c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1921336242}
+    - target: {fileID: 4658964055815313436, guid: 101c0c212f3758747babf68d048429c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideClue
+      objectReference: {fileID: 0}
     - target: {fileID: 4697607634532322340, guid: 101c0c212f3758747babf68d048429c3, type: 3}
       propertyPath: m_Name
       value: LargeNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697607634532322340, guid: 101c0c212f3758747babf68d048429c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084776748105526224, guid: 101c0c212f3758747babf68d048429c3, type: 3}
       propertyPath: m_Pivot.x
@@ -7302,6 +7314,7 @@ GameObject:
   - component: {fileID: 1189987724}
   - component: {fileID: 1189987727}
   - component: {fileID: 1189987726}
+  - component: {fileID: 1189987728}
   m_Layer: 5
   m_Name: FrontPageFury
   m_TagString: Untagged
@@ -7370,6 +7383,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189987723}
   m_CullTransparentMesh: 1
+--- !u!114 &1189987728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189987723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128536676ff41324a81c4206a23cd9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 0.2
+  minScale: 0.5
+  maxScale: 2.5
 --- !u!1 &1205187293
 GameObject:
   m_ObjectHideFlags: 0
@@ -9220,13 +9248,14 @@ GameObject:
   - component: {fileID: 1356197366}
   - component: {fileID: 1356197368}
   - component: {fileID: 1356197367}
+  - component: {fileID: 1356197369}
   m_Layer: 5
   m_Name: ScandalSheet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1356197366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9288,6 +9317,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356197365}
   m_CullTransparentMesh: 1
+--- !u!114 &1356197369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356197365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128536676ff41324a81c4206a23cd9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 0.2
+  minScale: 0.5
+  maxScale: 2.5
 --- !u!1 &1357018723
 GameObject:
   m_ObjectHideFlags: 0
@@ -10349,6 +10393,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: StickyNote
       objectReference: {fileID: 0}
+    - target: {fileID: 3525605644419947886, guid: 4e6050f9cc52a3a44b6b775ef2467adf, type: 3}
+      propertyPath: clueText
+      value: 
+      objectReference: {fileID: 1686018595}
+    - target: {fileID: 3525605644419947886, guid: 4e6050f9cc52a3a44b6b775ef2467adf, type: 3}
+      propertyPath: cluePopup
+      value: 
+      objectReference: {fileID: 2047942383}
+    - target: {fileID: 3525605644419947886, guid: 4e6050f9cc52a3a44b6b775ef2467adf, type: 3}
+      propertyPath: clueMessage
+      value: 'Rick Dalton had full access during the window of the crime.
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 8523626703915902647, guid: 4e6050f9cc52a3a44b6b775ef2467adf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11283,6 +11341,7 @@ GameObject:
   - component: {fileID: 1623318306}
   - component: {fileID: 1623318308}
   - component: {fileID: 1623318307}
+  - component: {fileID: 1623318309}
   m_Layer: 5
   m_Name: TheValleyEcho
   m_TagString: Untagged
@@ -11351,6 +11410,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623318305}
   m_CullTransparentMesh: 1
+--- !u!114 &1623318309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623318305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128536676ff41324a81c4206a23cd9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 0.2
+  minScale: 0.5
+  maxScale: 2.5
 --- !u!1 &1638642203
 GameObject:
   m_ObjectHideFlags: 0
@@ -11388,6 +11462,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1686018595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1449467304228964415, guid: 101c0c212f3758747babf68d048429c3, type: 3}
+  m_PrefabInstance: {fileID: 26101997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1688025599
 GameObject:
   m_ObjectHideFlags: 0
@@ -12463,6 +12548,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1921336242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3525605644419947886, guid: 4e6050f9cc52a3a44b6b775ef2467adf, type: 3}
+  m_PrefabInstance: {fileID: 1530710939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b79543446d5ac42a322a29ca774619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1922325900
 GameObject:
   m_ObjectHideFlags: 0
@@ -13043,6 +13139,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044509178}
   m_CullTransparentMesh: 1
+--- !u!1 &2047942383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4697607634532322340, guid: 101c0c212f3758747babf68d048429c3, type: 3}
+  m_PrefabInstance: {fileID: 26101997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2072137608
 GameObject:
   m_ObjectHideFlags: 0
