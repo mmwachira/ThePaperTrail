@@ -1,34 +1,22 @@
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class ClueManager : MonoBehaviour
 {
-    public static ClueManager Instance;
+    [Header("Assign the sticky note GameObject to show")]
+    public GameObject stickyNoteClue;
 
-    public List<string> foundClues = new List<string>();
-    public TMP_Text[] clueTexts;
+    private bool clueRevealed = false;
 
-    private void Awake()
+
+    public void OnNewspaperClicked()
     {
-        if (Instance == null) Instance = this;
-    }
 
-    public void AddClue(string clueText)
-    {
-        if (!foundClues.Contains(clueText))
+        // Reveal the sticky note clue ONCE
+        if (!clueRevealed && stickyNoteClue != null)
         {
-            foundClues.Add(clueText);
-            UpdateInventoryUI();
-        }
-    }
-
-    void UpdateInventoryUI()
-    {
-        for (int i = 0; i < clueTexts.Length; i++)
-        {
-            clueTexts[i].text = i < foundClues.Count ? foundClues[i] : "Clue " + (i + 1) + ": ___";
+            stickyNoteClue.SetActive(true);
+            clueRevealed = true;
         }
     }
 }
