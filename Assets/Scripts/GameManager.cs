@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
     public Animator frontPageAnimator;
     public GameObject frontPage;
     public GameObject newsPanel1;
-    public GameObject cluePopupPanel;
-    public TMP_Text cluePopupText;
     public GameObject deductionPanel;
     public GameObject startButton;
 
@@ -26,16 +24,6 @@ public class GameManager : MonoBehaviour
         frontPage.SetActive(true);
 
         StartCoroutine(ShowStartButton(2f)); // Show start button after 2 seconds
-    }
-    public void ShowCluePopup(string text)
-    {
-        cluePopupPanel.SetActive(true);
-        cluePopupText.text = text;
-    }
-
-    public void CloseCluePopup()
-    {
-        cluePopupPanel.SetActive(false);
     }
 
     public void OpenDeductionPanel()

@@ -3,14 +3,12 @@ using UnityEngine.UI;
 
 public class NewspaperManager : MonoBehaviour
 {
-    public StickyNote stickyNote; // Reference to the StickyNote script
 
     [Header("Newspaper GameObjects")]
     public GameObject[] newspapers; // Drag and drop your 4 newspapers here
 
     [Header("UI Elements")]
     public GameObject suspectSelectionPanel; // Panel where player selects suspects
-    public GameObject clueStickyNotePanel;   // Panel that shows sticky notes
     public GameObject notepadPanel;          // Optional: your notepad panel
 
     private int currentPhase = 0; // 0 = first newspaper
@@ -29,11 +27,11 @@ public class NewspaperManager : MonoBehaviour
         {
             ToggleNotepad();
         }
-        if (stickyNote.clueOpened == true)
-        {
-            UnlockNextNewspaper(); // Unlock next newspaper when clue is opened
-            stickyNote.clueOpened = false; // Reset the clueOpened state
-        }
+        // if (articleOpened)
+        // {
+        //     UnlockNextNewspaper(); // Unlock next newspaper when article is opened
+        //     articleOpened = false; // Reset the articleOpened state
+        // }
     }
 
     public void OpenArticle()
@@ -41,13 +39,12 @@ public class NewspaperManager : MonoBehaviour
         if (!articleOpened)
         {
             articleOpened = true;
-            clueStickyNotePanel.SetActive(true); // Show sticky notes when article opens
+
         }
     }
 
     public void ReadyForSuspectSelection()
     {
-        clueStickyNotePanel.SetActive(false);
         suspectSelectionPanel.SetActive(true);
     }
 
@@ -76,7 +73,7 @@ public class NewspaperManager : MonoBehaviour
         }
     }
 
-    private void UnlockNextNewspaper()
+    public void UnlockNextNewspaper()
     {
         if (currentPhase < newspapers.Length - 1)
         {
