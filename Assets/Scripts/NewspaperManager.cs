@@ -84,7 +84,6 @@ public class NewspaperManager : MonoBehaviour
         {
             currentPhase++;
             ActivateCurrentNewspaper();
-            //ActivateOnlyCurrentNewspaper();
         }
     }
 
