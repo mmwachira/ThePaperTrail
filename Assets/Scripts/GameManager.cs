@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
 
     public Animator frontPageAnimator;
     public GameObject frontPage;
-    public GameObject newsPanel1;
+    public GameObject investigationBoard;
+    public GameObject bioPanel;
+    public GameObject[] bios;
     public GameObject deductionPanel;
     public GameObject startButton;
 
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator ShowNews(float delay)
     {
         yield return new WaitForSeconds(delay);
-        newsPanel1.SetActive(true);
+        investigationBoard.SetActive(true);
         frontPage.SetActive(false);
     }
 
@@ -53,5 +55,22 @@ public class GameManager : MonoBehaviour
         StartCoroutine(ShowNews(2f));
 
 
+    }
+
+    public void OpenBio(int suspectIndex)
+    {
+        //investigationBoard.SetActive(false);
+        bioPanel.SetActive(true);
+        for (int i = 0; i < bios.Length; i++)
+        {
+            bios[i].SetActive(i == suspectIndex); // Show only the first bio
+        }
+    }
+
+    public void CloseBio()
+    {
+        bioPanel.SetActive(false);
+        gameObject.SetActive(false);
+        investigationBoard.SetActive(true);
     }
 }

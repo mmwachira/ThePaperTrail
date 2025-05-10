@@ -73,12 +73,18 @@ public class NewspaperManager : MonoBehaviour
         }
     }
 
+    private void ActivateCurrentNewspaper()
+    {
+        newspapers[currentPhase].SetActive(true);
+    }
+
     public void UnlockNextNewspaper()
     {
         if (currentPhase < newspapers.Length - 1)
         {
             currentPhase++;
-            ActivateOnlyCurrentNewspaper();
+            ActivateCurrentNewspaper();
+            //ActivateOnlyCurrentNewspaper();
         }
     }
 
