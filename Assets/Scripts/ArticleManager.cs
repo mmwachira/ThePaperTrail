@@ -4,27 +4,22 @@ using UnityEngine.UI;
 public class ArticleManager : MonoBehaviour
 {
     public GameObject[] articles; // Assign in the inspector
-    public GameObject enlargedArticleDisplay;
-    public Image enlargedImageDisplay; // Image component inside EnlargedArticleDisplay
+    public GameObject articlePanel; // Assign in the inspector
 
     public void ShowArticle(int index)
     {
-        // Hide all first
-        foreach (var article in articles)
-            article.SetActive(false);
 
-        // Show selected
-        articles[index].SetActive(true);
+        GameManager.Instance.investigationBoard.SetActive(false); // Hide the investigation board
+        articlePanel.SetActive(true); // Show the article panel
+        articles[index].SetActive(true); // Show selected
     }
 
-    public void EnlargeArticle(Sprite articleSprite)
+    public void CloseArticle()
     {
-        enlargedImageDisplay.sprite = articleSprite;
-        enlargedArticleDisplay.SetActive(true);
+        gameObject.SetActive(false); // Hide article
+        articlePanel.SetActive(false); // Hide the article panel
+        GameManager.Instance.investigationBoard.SetActive(true); // Show the investigation board again
+
     }
 
-    public void CloseEnlargedView()
-    {
-        enlargedArticleDisplay.SetActive(false);
-    }
 }

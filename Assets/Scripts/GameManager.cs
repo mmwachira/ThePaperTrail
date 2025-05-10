@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         bioPanel.SetActive(true);
         for (int i = 0; i < bios.Length; i++)
         {
-            bios[i].SetActive(i == suspectIndex); // Show only the first bio
+            bios[i].SetActive(i == suspectIndex); // Show only the bio in the index passed
         }
     }
 
