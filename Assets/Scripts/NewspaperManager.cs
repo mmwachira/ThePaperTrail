@@ -7,10 +7,6 @@ public class NewspaperManager : MonoBehaviour
     [Header("Newspaper GameObjects")]
     public GameObject[] newspapers; // Drag and drop your 4 newspapers here
 
-    [Header("UI Elements")]
-    public GameObject suspectSelectionPanel; // Panel where player selects suspects
-    public GameObject notepadPanel;          // Optional: your notepad panel
-
     private int currentPhase = 0; // 0 = first newspaper
 
     private bool articleOpened = false;
@@ -18,20 +14,6 @@ public class NewspaperManager : MonoBehaviour
     private void Start()
     {
         ActivateOnlyCurrentNewspaper();
-    }
-
-    private void Update()
-    {
-        // Optional: open/close notepad with a key
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            ToggleNotepad();
-        }
-        // if (articleOpened)
-        // {
-        //     UnlockNextNewspaper(); // Unlock next newspaper when article is opened
-        //     articleOpened = false; // Reset the articleOpened state
-        // }
     }
 
     public void OpenArticle()
@@ -43,27 +25,6 @@ public class NewspaperManager : MonoBehaviour
         }
     }
 
-    public void ReadyForSuspectSelection()
-    {
-        suspectSelectionPanel.SetActive(true);
-    }
-
-    public void SelectSuspect()
-    {
-        suspectSelectionPanel.SetActive(false);
-        articleOpened = false;
-
-        currentPhase++;
-
-        if (currentPhase >= newspapers.Length)
-        {
-            Debug.Log("All newspapers done! Show final screen.");
-            // TODO: Show final conclusion screen
-            return;
-        }
-
-        ActivateOnlyCurrentNewspaper();
-    }
 
     private void ActivateOnlyCurrentNewspaper()
     {
@@ -84,14 +45,6 @@ public class NewspaperManager : MonoBehaviour
         {
             currentPhase++;
             ActivateCurrentNewspaper();
-        }
-    }
-
-    private void ToggleNotepad()
-    {
-        if (notepadPanel != null)
-        {
-            notepadPanel.SetActive(!notepadPanel.activeSelf);
         }
     }
 }

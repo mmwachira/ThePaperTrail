@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         investigationBoard.SetActive(true);
         frontPage.SetActive(false);
+        UIManager.Instance.ShowWelcome("Welcome Detective! Please open the first newspaper of the day."); // Show welcome message
     }
 
     public void StartGame()
@@ -59,7 +60,6 @@ public class GameManager : MonoBehaviour
 
     public void OpenBio(int suspectIndex)
     {
-        //investigationBoard.SetActive(false);
         bioPanel.SetActive(true);
         for (int i = 0; i < bios.Length; i++)
         {

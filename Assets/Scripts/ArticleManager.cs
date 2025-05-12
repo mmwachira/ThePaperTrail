@@ -16,7 +16,6 @@ public class ArticleManager : MonoBehaviour
 
     public void CloseArticle()
     {
-        gameObject.SetActive(false); // Hide article
         articlePanel.SetActive(false); // Hide the article panel
         GameManager.Instance.investigationBoard.SetActive(true); // Show the investigation board again
 

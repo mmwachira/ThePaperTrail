@@ -35,7 +35,6 @@ public class FreeDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (clueManager != null)
         {
             clueManager.AttemptSnap(this);
-            //clueManager.CheckCluePositions();
         }
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ClueManager : MonoBehaviour
@@ -19,7 +20,6 @@ public class ClueManager : MonoBehaviour
 
     public void AttemptSnap(FreeDraggable draggable)
     {
-        Debug.Log("AttemptSnap called");
         RectTransform draggableRect = draggable.GetRectTransform();
         ClueCard clueCard = draggable.GetClueCardComponent();
         float closestDistance = float.MaxValue;
@@ -80,15 +80,25 @@ public class ClueManager : MonoBehaviour
 
         if (allCorrect)
         {
-            Debug.Log("Correct order!");
-            culpritchoicePanel.SetActive(true); // Show the culprit choice panel
-
+            StartCoroutine(ShowFinalObjective()); // Show final message after 2 seconds
+            //culpritchoicePanel.SetActive(true); // Show the culprit choice panel
 
         }
         else
         {
-            Debug.Log("Incorrect order!");
+            UIManager.Instance.ShowWarning("Incorrect order! Please try again.");
+
         }
+
+    }
+
+    private IEnumerator ShowFinalObjective()
+    {
+        UIManager.Instance.ShowWarning("Correct order!");
+        yield return new WaitForSeconds(UIManager.Instance.GetWarningDuration());
+        culpritchoicePanel.SetActive(true); // Show the culprit choice panel
+
+        UIManager.Instance.ShowObjective("Choose the culprit. You only have one chance!");
     }
 
 
