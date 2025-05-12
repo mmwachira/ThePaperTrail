@@ -6,6 +6,7 @@ public class ClueManager : MonoBehaviour
     public RectTransform[] targetZones; // invisible placeholder areas
     public int[] correctIDs;  // correct clue order
     public bool allCorrect = false; // flag to check if all clues are in the correct position
+    public GameObject culpritchoicePanel; // panel to choose the culprit
 
     public float snapDistanceThreshold = 50f; // distance threshold for snapping
 
@@ -29,7 +30,6 @@ public class ClueManager : MonoBehaviour
         {
 
             float distance = Vector2.Distance(draggableRect.anchoredPosition, targetZones[i].anchoredPosition);
-            Debug.Log($"Distance to target {i}: {distance}");
             if (distance < closestDistance)
             {
                 closestDistance = distance;
@@ -37,7 +37,6 @@ public class ClueManager : MonoBehaviour
                 closestIndex = i;
             }
         }
-        Debug.Log($"Closest distance: {closestDistance}, Threshold: {snapDistanceThreshold}");
 
         if (closestDistance < snapDistanceThreshold)
         {
@@ -45,13 +44,12 @@ public class ClueManager : MonoBehaviour
             draggableRect.anchoredPosition = closestTarget.anchoredPosition;
             // Store the snapped clue
             snappedClues[closestIndex] = clueCard;
-            Debug.Log($"Snapped to target {closestIndex}");
+
 
         }
         else
         {
             // Reset position if not close enough
-            Debug.Log("No snap");
             draggableRect.SetParent(null);
         }
     }
@@ -66,7 +64,6 @@ public class ClueManager : MonoBehaviour
             if (snappedClues[i] == null)
             {
                 allCorrect = false;
-                Debug.Log($"Clue at index {i} is not snapped.");
             }
             else
             {
@@ -74,12 +71,9 @@ public class ClueManager : MonoBehaviour
                 if (snappedClueID != correctIDs[i])
                 {
                     allCorrect = false;
-                    Debug.Log($"Target {i}: Incorrect clue ID. Expected {correctIDs[i]}, got {snappedClueID}.");
+
                 }
-                else
-                {
-                    Debug.Log($"Target {i}: Correct clue ID {snappedClueID}.");
-                }
+
             }
 
         }
@@ -87,7 +81,9 @@ public class ClueManager : MonoBehaviour
         if (allCorrect)
         {
             Debug.Log("Correct order!");
-            // Continue to next phase
+            culpritchoicePanel.SetActive(true); // Show the culprit choice panel
+
+
         }
         else
         {
