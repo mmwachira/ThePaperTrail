@@ -4382,7 +4382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 2132106632}
 --- !u!1 &570396416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4624,7 +4624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 2132106632}
 --- !u!1 &586130583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5281,7 +5281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 2132106632}
 --- !u!1 &678710839
 GameObject:
   m_ObjectHideFlags: 0
@@ -5522,7 +5522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 2132106632}
 --- !u!1 &720314072
 GameObject:
   m_ObjectHideFlags: 0
@@ -11096,7 +11096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 2132106632}
 --- !u!1 &1817147975
 GameObject:
   m_ObjectHideFlags: 0
@@ -11797,7 +11797,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928452427}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94d229fd046e5e24ebc57831eb98448c, type: 3}
   m_Name: 
@@ -12572,6 +12572,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123100986}
   m_CullTransparentMesh: 1
+--- !u!1 &2132106631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132106633}
+  - component: {fileID: 2132106632}
+  m_Layer: 5
+  m_Name: ClueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2132106632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132106631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d229fd046e5e24ebc57831eb98448c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clueCards:
+  - {fileID: 572777620}
+  - {fileID: 1798910400}
+  - {fileID: 699883531}
+  - {fileID: 562895828}
+  - {fileID: 667721737}
+  targetZones:
+  - {fileID: 699883528}
+  - {fileID: 1798910397}
+  - {fileID: 667721734}
+  - {fileID: 572777617}
+  - {fileID: 562895825}
+  correctIDs: 0200000001000000040000000000000003000000
+  allCorrect: 0
+  culpritchoicePanel: {fileID: 1873959381}
+  snapDistanceThreshold: 50
+--- !u!224 &2132106633
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132106631}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.10691672, y: 0.10691672, z: 0.10691672}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2340.748, y: -1850.4976}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2144446600
 GameObject:
   m_ObjectHideFlags: 0
@@ -12761,7 +12825,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1928452433}
+      - m_Target: {fileID: 2132106632}
         m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
         m_MethodName: CheckCluePositions
         m_Mode: 1
@@ -12933,3 +12997,4 @@ SceneRoots:
   - {fileID: 678710841}
   - {fileID: 1928452429}
   - {fileID: 817305965}
+  - {fileID: 2132106633}
