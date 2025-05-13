@@ -8,8 +8,6 @@ public class SuspectSelector : MonoBehaviour
     public GameObject accusationResultPanel;
     public TMP_Text accusationResultText;
 
-    // ... (Awake function remains the same)
-
     public void AccuseSuspect(Suspect chosenSuspect)
     {
         if (accusationResultPanel != null && accusationResultText != null && chosenSuspect != null && correctCulprit != null)
@@ -18,13 +16,20 @@ public class SuspectSelector : MonoBehaviour
 
             if (chosenSuspect.suspectName.ToLower() == correctCulprit.suspectName.ToLower())
             {
-                accusationResultText.text = "CORRECT! You've solved the mystery!";
+                AudioManager.Instance.PlayWinSound();
+                UIManager.Instance.yesButton.SetActive(false);
+                UIManager.Instance.noButton.SetActive(false);
+                accusationResultPanel.SetActive(true);
+                accusationResultText.text = "CORRECT! You've solved the mystery detective!";
             }
             else
             {
-                accusationResultText.text = $"INCORRECT! The culprit was the {correctCulprit.suspectName}. Better luck next time!";
+                AudioManager.Instance.PlayLoseSound();
+                UIManager.Instance.yesButton.SetActive(true);
+                UIManager.Instance.noButton.SetActive(true);
+                accusationResultPanel.SetActive(true);
+                accusationResultText.text = "Haha! Better luck next time detective!\n Try again?";
             }
         }
-        // ... (Error handling)
     }
 }

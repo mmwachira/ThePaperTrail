@@ -81,7 +81,6 @@ public class ClueManager : MonoBehaviour
         if (allCorrect)
         {
             StartCoroutine(ShowFinalObjective()); // Show final message after 2 seconds
-            //culpritchoicePanel.SetActive(true); // Show the culprit choice panel
 
         }
         else
@@ -94,6 +93,7 @@ public class ClueManager : MonoBehaviour
 
     private IEnumerator ShowFinalObjective()
     {
+        AudioManager.Instance.PlayAccusationMusic();
         UIManager.Instance.ShowWarning("Correct order!");
         yield return new WaitForSeconds(UIManager.Instance.GetWarningDuration());
         culpritchoicePanel.SetActive(true); // Show the culprit choice panel

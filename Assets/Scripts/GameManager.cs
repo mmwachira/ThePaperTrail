@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         investigationBoard.SetActive(true);
         frontPage.SetActive(false);
         UIManager.Instance.ShowWelcome("Welcome Detective! Please open the first newspaper of the day."); // Show welcome message
+        AudioManager.Instance.StartGameplayMusic();
     }
 
     public void StartGame()
@@ -55,7 +56,18 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(ShowNews(2f));
 
+    }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //AudioManager.Instance.FadeOutAllMusic();
+        //StartCoroutine(ShowNews(2f));
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
     public void OpenBio(int suspectIndex)

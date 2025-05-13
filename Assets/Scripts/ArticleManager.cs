@@ -14,9 +14,10 @@ public class ArticleManager : MonoBehaviour
         articles[index].SetActive(true); // Show selected
     }
 
-    public void CloseArticle()
+    public void CloseArticle(int index)
     {
         articlePanel.SetActive(false); // Hide the article panel
+        articles[index].SetActive(false); // Hide selected article
         GameManager.Instance.investigationBoard.SetActive(true); // Show the investigation board again
 
     }

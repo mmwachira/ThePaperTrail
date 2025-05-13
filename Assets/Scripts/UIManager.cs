@@ -7,13 +7,10 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    // public GameObject frontPage;
-    // public GameObject investigationBoard;
-    // public GameObject bioPanel;
-    // public GameObject[] bios;
-    // public GameObject deductionPanel;
-    // public GameObject startButton;
+    public GameObject yesButton;
+    public GameObject noButton;
     public GameObject winPanel;
+    public TMP_Text winText;
     public GameObject WarningPanel;
     public TMP_Text warningText;
 
@@ -21,79 +18,6 @@ public class UIManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
     }
-
-    // void Start()
-    // {
-    //     frontPage.SetActive(true);
-    //     StartCoroutine(ShowStartButton(2f)); // Show start button after 2 seconds
-    // }
-    // public void OpenDeductionPanel()
-    // {
-    //     deductionPanel.SetActive(true);
-    // }
-    // public IEnumerator ShowStartButton(float delay)
-    // {
-    //     yield return new WaitForSeconds(delay);
-    //     startButton.SetActive(true);
-    // }
-    // public IEnumerator ShowNews(float delay)
-    // {
-    //     yield return new WaitForSeconds(delay);
-    //     investigationBoard.SetActive(true);
-    //     frontPage.SetActive(false);
-    // }
-    // public void StartGame()
-    // {
-    //     frontPage.SetActive(false);
-    //     startButton.SetActive(false);
-    //     StartCoroutine(ShowNews(2f));
-    // }
-    // public void OpenBio(int suspectIndex)
-    // {
-    //     bioPanel.SetActive(true);
-    //     bios[suspectIndex].SetActive(true);
-    // }
-    // public void CloseBio(int suspectIndex)
-    // {
-    //     bios[suspectIndex].SetActive(false);
-    //     bioPanel.SetActive(false);
-    // }
-    // public void CloseDeductionPanel()
-    // {
-    //     deductionPanel.SetActive(false);
-    // }
-    // public void CloseInvestigationBoard()
-    // {
-    //     investigationBoard.SetActive(false);
-    // }
-    // public void CloseFrontPage()
-    // {
-    //     frontPage.SetActive(false);
-    // }
-    // public void CloseAll()
-    // {
-    //     frontPage.SetActive(false);
-    //     investigationBoard.SetActive(false);
-    //     bioPanel.SetActive(false);
-    //     deductionPanel.SetActive(false);
-    //     startButton.SetActive(false);
-    // }
-    // public void ShowFrontPage()
-    // {
-    //     frontPage.SetActive(true);
-    // }
-    // public void ShowInvestigationBoard()
-    // {
-    //     investigationBoard.SetActive(true);
-    // }
-    // public void ShowBio(int suspectIndex)
-    // {
-    //     bios[suspectIndex].SetActive(true);
-    // }
-    // public void ShowDeductionPanel()
-    // {
-    //     deductionPanel.SetActive(true);
-    // }
 
     public void ShowWelcome(string message)
     {
@@ -138,6 +62,15 @@ public class UIManager : MonoBehaviour
 
     public void ShowWin()
     {
+        winText.text = "Congratulations Detective! You've solved the mystery!";
+        winPanel.SetActive(true);
+    }
+
+    public void ShowLose()
+    {
+        winText.text = "Haha! Better luck next time detective!\n\nTry again?";
+        yesButton.SetActive(true);
+        noButton.SetActive(true);
         winPanel.SetActive(true);
     }
 }

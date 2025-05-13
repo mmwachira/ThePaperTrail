@@ -1,0 +1,249 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-7403070999992493639
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AccusationMusic
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: cb3f80ebcce1e0843a915ec4368e479e
+  m_Children: []
+  m_Volume: 390e378c95cb9fe4f9db3fd6a7512106
+  m_Pitch: efbf2eecf437aee46800cd90482e7de0
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -3038457319516484112}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &-4478810401880348495
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LoseSFX
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 2f15ce18ce0d12644af929d21b225017
+  m_Children: []
+  m_Volume: 0a92786b1644f634aa75ad0e2a249d6c
+  m_Pitch: 516ca37999395be4a81b539a50a691d5
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 2917792614002180994}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &-4337042632096881239
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WinSFX
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 8833d7593b794f145afb82333e8eb682
+  m_Children: []
+  m_Volume: f179d4b495398784b8dabdaa1db1e869
+  m_Pitch: 6b53113ec19847443b2392485a7ced62
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -482042254915653619}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &-4245537637587074337
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: StartupMusic
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 912503aa31162744cb6641a0df3f8cfc
+  m_Children: []
+  m_Volume: 96d21e88139470a49af698865215d381
+  m_Pitch: d895bcbed24844d499735f271bfc9927
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 1248025623426981781}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-3038457319516484112
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 77749166092854e45b8a849bc0004e88
+  m_EffectName: Attenuation
+  m_MixLevel: 673fb0493b546a545b48c1eb1d1a75d5
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-482042254915653619
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 4842b13eaf145c943bb3251309489da9
+  m_EffectName: Attenuation
+  m_MixLevel: 1965d4ef9285a2d48ab34566e3821565
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GameMixer
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters:
+  - guid: 390e378c95cb9fe4f9db3fd6a7512106
+    name: AccusationMusicVolume
+  - guid: 52c80206d6c8d064598079c57ec7026e
+    name: GameplayMusicVolume
+  - guid: 96d21e88139470a49af698865215d381
+    name: StartupMusicVolume
+  m_AudioMixerGroupViews:
+  - guids:
+    - 9aea9fa583041a044ad17dacb7554b48
+    - 912503aa31162744cb6641a0df3f8cfc
+    - 7d94e44f972a7254aa7957864251a26b
+    - 8833d7593b794f145afb82333e8eb682
+    - 2f15ce18ce0d12644af929d21b225017
+    - cb3f80ebcce1e0843a915ec4368e479e
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 9aea9fa583041a044ad17dacb7554b48
+  m_Children:
+  - {fileID: -4245537637587074337}
+  - {fileID: 3138988184448761193}
+  - {fileID: -7403070999992493639}
+  - {fileID: -4337042632096881239}
+  - {fileID: -4478810401880348495}
+  m_Volume: 7ec1c71c4fc68fe44871bf756b0d1a16
+  m_Pitch: 246a95e2a16404d4bbd23b3a39582c6b
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 802db22ebe625b74d9768153118a0a24
+  m_EffectName: Attenuation
+  m_MixLevel: f410a479cbabc3940a9753cc809a871b
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: cfd76aa2c37cb1c42acae3675ea28fa0
+  m_FloatValues: {}
+  m_TransitionOverrides: {}
+--- !u!244 &1248025623426981781
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d0afc129e9bf9cc4aae8965a3ed93554
+  m_EffectName: Attenuation
+  m_MixLevel: 77d04c35509df4840b46b6388dd9ed23
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &2917792614002180994
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: a0b5a9cdb486e40448c830d81c66a5e7
+  m_EffectName: Attenuation
+  m_MixLevel: 7028e103cea1b5443b8c49639a10d4b7
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &3138988184448761193
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GameplayMusic
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 7d94e44f972a7254aa7957864251a26b
+  m_Children: []
+  m_Volume: 52c80206d6c8d064598079c57ec7026e
+  m_Pitch: e4a7775882cf7364f8d693426a38569b
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 6429484074535660873}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &6429484074535660873
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: a631bd13f7331084dbcf6848ffd63246
+  m_EffectName: Attenuation
+  m_MixLevel: 2fcb0a1114ea4eb489fd860e24e8dcb1
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
