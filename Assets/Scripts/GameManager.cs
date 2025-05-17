@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public Animator frontPageAnimator;
+    public Animator openNewspaperAnimator;
     public GameObject frontPage;
     public GameObject investigationBoard;
     public GameObject bioPanel;

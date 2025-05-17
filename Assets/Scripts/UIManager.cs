@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         WarningPanel.SetActive(false);
+        GameManager.Instance.openNewspaperAnimator.SetTrigger("Open");
     }
 
     public void ShowObjective(string message)

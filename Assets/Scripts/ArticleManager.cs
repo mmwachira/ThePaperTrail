@@ -12,6 +12,7 @@ public class ArticleManager : MonoBehaviour
         GameManager.Instance.investigationBoard.SetActive(false); // Hide the investigation board
         articlePanel.SetActive(true); // Show the article panel
         articles[index].SetActive(true); // Show selected
+        GameManager.Instance.openNewspaperAnimator.SetTrigger("Stop"); // Stop the newspaper animation
     }
 
     public void CloseArticle(int index)
