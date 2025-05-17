@@ -4215,14 +4215,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1928452431}
-        m_TargetAssemblyTypeName: NewspaperManager, Assembly-CSharp
-        m_MethodName: UnlockNextNewspaper
-        m_Mode: 1
+      - m_Target: {fileID: 1928452432}
+        m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
+        m_MethodName: UnlockNextArticle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -7428,9 +7428,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1928452433}
-        m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
-        m_MethodName: OnNewspaperClicked
+      - m_Target: {fileID: 1928452432}
+        m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
+        m_MethodName: ShowArticle
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7440,9 +7440,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1928452432}
-        m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
-        m_MethodName: ShowArticle
+      - m_Target: {fileID: 1928452433}
+        m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
+        m_MethodName: OnNewspaperClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7945,6 +7945,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1928452432}
         m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
+        m_MethodName: UnlockNextArticle
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1928452432}
+        m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
         m_MethodName: CloseArticle
         m_Mode: 3
         m_Arguments:
@@ -7954,18 +7966,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1928452431}
-        m_TargetAssemblyTypeName: NewspaperManager, Assembly-CSharp
-        m_MethodName: UnlockNextNewspaper
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1217246340
 MonoBehaviour:
@@ -9139,14 +9139,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1928452431}
-        m_TargetAssemblyTypeName: NewspaperManager, Assembly-CSharp
-        m_MethodName: UnlockNextNewspaper
-        m_Mode: 1
+      - m_Target: {fileID: 1928452432}
+        m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
+        m_MethodName: UnlockNextArticle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -9218,7 +9218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1405849790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11868,6 +11868,7 @@ GameObject:
   - component: {fileID: 1879406093}
   - component: {fileID: 1879406092}
   - component: {fileID: 1879406091}
+  - component: {fileID: 1879406094}
   m_Layer: 5
   m_Name: ValleyEchoFP
   m_TagString: Untagged
@@ -11938,9 +11939,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1928452433}
-        m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
-        m_MethodName: OnNewspaperClicked
+      - m_Target: {fileID: 1928452432}
+        m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
+        m_MethodName: ShowArticle
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11950,9 +11951,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1928452432}
-        m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
-        m_MethodName: ShowArticle
+      - m_Target: {fileID: 1928452433}
+        m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
+        m_MethodName: OnNewspaperClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12000,6 +12001,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879406089}
   m_CullTransparentMesh: 1
+--- !u!95 &1879406094
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879406089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 273a50a745ad98a45a355b3e654e423b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1928452427
 GameObject:
   m_ObjectHideFlags: 0
@@ -12034,6 +12057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frontPageAnimator: {fileID: 7988624}
+  openNewspaperAnimator: {fileID: 1879406094}
   frontPage: {fileID: 2044509178}
   investigationBoard: {fileID: 1263051463}
   bioPanel: {fileID: 691825401}
@@ -12093,6 +12117,11 @@ MonoBehaviour:
   - {fileID: 1273201786}
   - {fileID: 1189987723}
   - {fileID: 1870064904}
+  newsPapers:
+  - {fileID: 1879406089}
+  - {fileID: 1186682702}
+  - {fileID: 915516658}
+  - {fileID: 974840379}
   articlePanel: {fileID: 1405849789}
 --- !u!114 &1928452433
 MonoBehaviour:

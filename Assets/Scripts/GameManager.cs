@@ -62,8 +62,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //AudioManager.Instance.FadeOutAllMusic();
-        //StartCoroutine(ShowNews(2f));
+
     }
 
     public void ExitGame()
