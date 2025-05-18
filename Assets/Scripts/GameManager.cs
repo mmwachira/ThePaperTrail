@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         investigationBoard.SetActive(true);
         frontPage.SetActive(false);
         UIManager.Instance.ShowWelcome("Welcome Detective! Please open the first newspaper of the day."); // Show welcome message
+        openNewspaperAnimator.SetTrigger("Open");
         AudioManager.Instance.StartGameplayMusic();
     }
 
@@ -65,9 +66,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void ExitGame()
+    public void ViewSummary()
     {
-        Application.Quit();
+
     }
 
     public void OpenBio(int suspectIndex)

@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 104235352}
   - component: {fileID: 104235351}
   m_Layer: 5
-  m_Name: YesBtn
+  m_Name: NewGameBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,7 +996,7 @@ RectTransform:
   m_Father: {fileID: 417406714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.55, y: 0.05}
-  m_AnchorMax: {x: 0.7, y: 0.2}
+  m_AnchorMax: {x: 0.85, y: 0.2}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1021,9 +1021,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.43537822, g: 0.7056604, b: 0.21169804, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.6830188, g: 0.44112816, b: 0.29253823, a: 1}
+    m_HighlightedColor: {r: 0.61960787, g: 0.427451, b: 0.2509804, a: 1}
+    m_PressedColor: {r: 0.61960787, g: 0.427451, b: 0.28627452, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1855,7 +1855,7 @@ RectTransform:
   - {fileID: 2050533577}
   m_Father: {fileID: 2075365448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0.05}
+  m_AnchorMin: {x: 0.15, y: 0.05}
   m_AnchorMax: {x: 0.45, y: 0.2}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -5932,8 +5932,8 @@ RectTransform:
   - {fileID: 2128979352}
   m_Father: {fileID: 2075365448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6, y: 0.05}
-  m_AnchorMax: {x: 0.9, y: 0.2}
+  m_AnchorMin: {x: 0.55, y: 0.05}
+  m_AnchorMax: {x: 0.85, y: 0.2}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7346,7 +7346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No
+  m_text: View Summary
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b377840737f1094e86754a356b7e4a4, type: 2}
   m_sharedMaterial: {fileID: 1345028227962607726, guid: 0b377840737f1094e86754a356b7e4a4, type: 2}
@@ -7816,7 +7816,7 @@ GameObject:
   - component: {fileID: 1030084212}
   - component: {fileID: 1030084211}
   m_Layer: 5
-  m_Name: NoBtn
+  m_Name: ViewSummaryBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7837,7 +7837,7 @@ RectTransform:
   - {fileID: 978187528}
   m_Father: {fileID: 417406714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3, y: 0.05}
+  m_AnchorMin: {x: 0.1, y: 0.05}
   m_AnchorMax: {x: 0.45, y: 0.2}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -7863,7 +7863,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7058824, g: 0.2903578, b: 0.21176468, a: 1}
+    m_NormalColor: {r: 0.7283019, g: 0.7283019, b: 0.7283019, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -12123,7 +12123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yes
+  m_text: New game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b377840737f1094e86754a356b7e4a4, type: 2}
   m_sharedMaterial: {fileID: 1345028227962607726, guid: 0b377840737f1094e86754a356b7e4a4, type: 2}
