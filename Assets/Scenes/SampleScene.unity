@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 0}
 --- !u!114 &187943579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6385,7 +6385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 0}
 --- !u!114 &915320179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6575,7 +6575,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1928452433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
         m_MethodName: OnNewspaperClicked
         m_Mode: 3
@@ -6587,7 +6587,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1928452433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
         m_MethodName: OnNewspaperClicked
         m_Mode: 3
@@ -7440,7 +7440,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1928452433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
         m_MethodName: OnNewspaperClicked
         m_Mode: 3
@@ -7584,7 +7584,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1928452433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
         m_MethodName: OnNewspaperClicked
         m_Mode: 3
@@ -8217,7 +8217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 0}
 --- !u!114 &1248411821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11951,9 +11951,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1928452433}
+      - m_Target: {fileID: 2132106631}
         m_TargetAssemblyTypeName: ClueManager, Assembly-CSharp
-        m_MethodName: OnNewspaperClicked
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12033,9 +12033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928452429}
   - component: {fileID: 1928452428}
-  - component: {fileID: 1928452431}
   - component: {fileID: 1928452432}
-  - component: {fileID: 1928452433}
   - component: {fileID: 1928452434}
   m_Layer: 0
   m_Name: GameManager
@@ -12083,23 +12081,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1928452431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928452427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b7714b6b5b279546bdaf4a2e9dd4d01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newspapers:
-  - {fileID: 1879406089}
-  - {fileID: 1186682702}
-  - {fileID: 915516658}
-  - {fileID: 974840379}
 --- !u!114 &1928452432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12123,34 +12104,6 @@ MonoBehaviour:
   - {fileID: 915516658}
   - {fileID: 974840379}
   articlePanel: {fileID: 1405849789}
---- !u!114 &1928452433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928452427}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94d229fd046e5e24ebc57831eb98448c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueCards:
-  - {fileID: 572777620}
-  - {fileID: 1798910400}
-  - {fileID: 699883531}
-  - {fileID: 562895828}
-  - {fileID: 667721737}
-  targetZones:
-  - {fileID: 699883528}
-  - {fileID: 1798910397}
-  - {fileID: 667721734}
-  - {fileID: 572777617}
-  - {fileID: 562895825}
-  correctIDs: 0200000001000000040000000000000003000000
-  allCorrect: 0
-  culpritchoicePanel: {fileID: 1873959381}
-  snapDistanceThreshold: 50
 --- !u!114 &1928452434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12522,7 +12475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 0}
 --- !u!114 &2044645929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12947,6 +12900,9 @@ MonoBehaviour:
   - {fileID: 572777617}
   - {fileID: 562895825}
   correctIDs: 0200000001000000040000000000000003000000
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  incorrectColor: {r: 1, g: 0, b: 0, a: 1}
+  highlightDuration: 0.2
   allCorrect: 0
   culpritchoicePanel: {fileID: 1873959381}
   snapDistanceThreshold: 50
@@ -13036,7 +12992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182e4632d7caf1747a7fb710658f0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueManager: {fileID: 1928452433}
+  clueManager: {fileID: 0}
 --- !u!114 &2144446604
 MonoBehaviour:
   m_ObjectHideFlags: 0

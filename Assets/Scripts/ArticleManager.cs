@@ -15,7 +15,7 @@ public class ArticleManager : MonoBehaviour
     {
         for (int i = 0; i < articles.Length; i++)
         {
-            articles[i].SetActive(i == 0); // Hide all newspapers except the first one
+            newsPapers[i].SetActive(i == 0); // Hide all newspapers except the first one
         }
     }
 
