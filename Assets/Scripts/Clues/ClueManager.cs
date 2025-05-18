@@ -16,23 +16,23 @@ public class ClueManager : MonoBehaviour
     public float snapDistanceThreshold = 50f; // distance threshold for snapping
 
     private ClueCard[] snappedClues; // Keep track of which clue is snapped to which target
-    private Image[] targetZoneImages; // To access image components for color changes
+    private Image[] targetZoneBackgrounds; // To access image components for color changes
 
     void Start()
     {
         snappedClues = new ClueCard[targetZones.Length];
-        targetZoneImages = new Image[targetZones.Length];
+        targetZoneBackgrounds = new Image[targetZones.Length];
         // Get the Image components from target zones
         for (int i = 0; i < targetZones.Length; i++)
         {
-            targetZoneImages[i] = targetZones[i].GetComponent<Image>();
-            if (targetZoneImages[i] == null)
+            Image backgroundImage = targetZones[i].GetComponent<Image>();
+            if (backgroundImage == null)
             {
                 Debug.LogWarning("No Image component found on target zone " + i);
             }
             else
             {
-                targetZoneImages[i].color = Color.clear; // Initialize with no color
+                targetZoneBackgrounds[i] = backgroundImage; // Store the image component for later use
             }
         }
     }
@@ -83,17 +83,17 @@ public class ClueManager : MonoBehaviour
             if (snappedClues[i] == null || snappedClues[i].GetID() != correctIDs[i])
             {
                 allCorrect = false;
-                if (targetZoneImages[i] != null)
+                if (targetZoneBackgrounds[i] != null)
                 {
-                    StartCoroutine(HighlightColor(targetZoneImages[i], incorrectColor));
+                    StartCoroutine(HighlightColor(targetZoneBackgrounds[i], incorrectColor));
                 }
             }
             else
             {
                 // Optionally highlight the correct target zone briefly
-                if (targetZoneImages[i] != null)
+                if (targetZoneBackgrounds[i] != null)
                 {
-                    StartCoroutine(HighlightColor(targetZoneImages[i], correctColor));
+                    StartCoroutine(HighlightColor(targetZoneBackgrounds[i], correctColor));
                 }
             }
         }
@@ -134,7 +134,9 @@ public class ClueManager : MonoBehaviour
     {
         if (index >= 0 && index < clueCards.Length)
         {
+            //targetZones[index].gameObject.SetActive(true); // Show the target zone
             clueCards[index].gameObject.SetActive(true);
+            Debug.Log("Clue card " + index + " activated.");
         }
     }
 
