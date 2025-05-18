@@ -19,6 +19,9 @@ public class SuspectSelector : MonoBehaviour
                 AudioManager.Instance.PlayWinSound();
                 UIManager.Instance.yesButton.SetActive(false);
                 UIManager.Instance.noButton.SetActive(false);
+                UIManager.Instance.WarningPanel.SetActive(false);
+                UIManager.Instance.confirmButton.SetActive(false);
+                UIManager.Instance.cancelButton.SetActive(false);
                 accusationResultPanel.SetActive(true);
                 accusationResultText.text = "CORRECT! You've solved the mystery detective!";
             }
@@ -27,6 +30,9 @@ public class SuspectSelector : MonoBehaviour
                 AudioManager.Instance.PlayLoseSound();
                 UIManager.Instance.yesButton.SetActive(true);
                 UIManager.Instance.noButton.SetActive(true);
+                UIManager.Instance.WarningPanel.SetActive(false);
+                UIManager.Instance.confirmButton.SetActive(false);
+                UIManager.Instance.cancelButton.SetActive(false);
                 accusationResultPanel.SetActive(true);
                 accusationResultText.text = "Haha! Better luck next time detective!\n Try again?";
             }

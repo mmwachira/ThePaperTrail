@@ -14,6 +14,9 @@ public class UIManager : MonoBehaviour
     public GameObject WarningPanel;
     public TMP_Text warningText;
 
+    public GameObject confirmButton;
+    public GameObject cancelButton;
+
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -52,7 +55,7 @@ public class UIManager : MonoBehaviour
     {
         WarningPanel.SetActive(true);
         warningText.text = message;
-        StartCoroutine(HideWarning(1f)); // Hide after 2 seconds
+        StartCoroutine(HideWarning(1f)); // Hide after 1 second
     }
 
     private IEnumerator HideWarning(float delay)
