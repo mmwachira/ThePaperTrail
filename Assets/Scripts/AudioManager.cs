@@ -99,7 +99,7 @@ public class AudioManager : MonoBehaviour
     private IEnumerator FadeInMusic(AudioSource audioSource, string exposedVolumeName, float duration)
     {
         audioSource.Play();
-        yield return StartCoroutine(FadeMixerGroupVolume(exposedVolumeName, -80f, -10f, duration));
+        yield return StartCoroutine(FadeMixerGroupVolume(exposedVolumeName, -80f, -20f, duration));
     }
 
     private IEnumerator FadeOutMusic(AudioSource audioSource, string exposedVolumeName, float duration)

@@ -21,6 +21,14 @@ public class ArticleManager : MonoBehaviour
 
     public void ShowArticle(int index)
     {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.OnNewspaperOpened(); // Notify UIManager that a newspaper has been opened
+        }
+        else
+        {
+            Debug.LogError("UIManager instance is null. Cannot notify about newspaper opening.");
+        }
 
         GameManager.Instance.investigationBoard.SetActive(false); // Hide the investigation board
         articlePanel.SetActive(true); // Show the article panel

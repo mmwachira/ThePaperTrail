@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
     public GameObject cancelButton;
     public GameObject closeButton;
 
+    private Coroutine welcomeCoroutine;
+    private bool isWelcomeShowing = false;
+
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -28,20 +31,22 @@ public class UIManager : MonoBehaviour
     {
         WarningPanel.SetActive(true);
         warningText.text = message;
-        StartCoroutine(HideWelcome(4f)); // Hide after 2 seconds
+        isWelcomeShowing = true;
+        welcomeCoroutine = StartCoroutine(HideWelcome(3f)); // Hide after 3 seconds
     }
     private IEnumerator HideWelcome(float delay)
     {
         yield return new WaitForSeconds(delay);
         WarningPanel.SetActive(false);
-        //GameManager.Instance.openNewspaperAnimator.SetTrigger("Open");
+        isWelcomeShowing = false;
+        welcomeCoroutine = null;
     }
 
     public void ShowObjective(string message)
     {
         WarningPanel.SetActive(true);
         warningText.text = message;
-        StartCoroutine(HideObjective(3f)); // Hide after 2 seconds
+        StartCoroutine(HideObjective(3f)); // Hide after 3 seconds
     }
     private IEnumerator HideObjective(float delay)
     {
@@ -93,5 +98,16 @@ public class UIManager : MonoBehaviour
         closeButton.SetActive(false);
         SuspectSelector.Instance.accusationResultPanel.SetActive(true);
 
+    }
+
+    public void OnNewspaperOpened()
+    {
+        if (isWelcomeShowing && welcomeCoroutine != null)
+        {
+            StopCoroutine(welcomeCoroutine);
+            isWelcomeShowing = false;
+            welcomeCoroutine = null;
+            ShowWelcome("Read the newspaper carefully to find clues!");
+        }
     }
 }
