@@ -13,3 +13,11 @@ MonoBehaviour:
   m_Name: Curator
   m_EditorClassIdentifier: 
   suspectName: Curator
+  suspectSummary: "Lauren Durrell, the respected curator and former intern, did show
+    up earlier than scheduled for a donor meeting that no one confirmed (Valley Echo),
+    and her badge was used twice that day (Writers Gazette), possibly cloned. She
+    was tight-lipped in interviews (Front Page Fury), and vouched for Rick Dalton\u2019s
+    temporary clearance (Scandal Sheet). But nothing in the timeline places her near
+    the alarms, control panels, or exit points during the heist. She may have been
+    manipulated \u2014 but not responsible."
+  suspectImage: {fileID: 21300000, guid: 546b55ee8e330d746b9b3ccc382d9306, type: 3}

@@ -13,3 +13,11 @@ MonoBehaviour:
   m_Name: Student
   m_EditorClassIdentifier: 
   suspectName: Student
+  suspectSummary: "Tasha Mendez appeared suspicious due to her filming privileges,
+    especially since her footage placed her near a security panel (Front Page Fury).
+    However, her presence was part of a school project, and the Writers Gazette revealed
+    that her footage captured Rick entering a restricted area, making her an accidental
+    witness, not the thief. In fact, her deleted post \u2014 \u201CWhen the halls
+    whisper, film it\u201D (Scandal Sheet) \u2014 hinted at something she saw, not
+    something she did. "
+  suspectImage: {fileID: 21300000, guid: b08538d9edaf9ea4a93cd45b62167c0c, type: 3}

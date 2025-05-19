@@ -13,3 +13,11 @@ MonoBehaviour:
   m_Name: Felon
   m_EditorClassIdentifier: 
   suspectName: Felon
+  suspectSummary: "Jorge \u201CJinx\u201D Mendez was caught near a rear exit on a
+    motion-activated camera (Scandal Sheet), and seen lingering near a control booth,
+    claiming to look for a restroom (Front Page Fury). His past made him a suspicious
+    figure, but no articles suggest he had access to forged documentation, system
+    knowledge, or a reason to target the artwork. The Valley Echo stated he was simply
+    \u201Cmeeting family,\u201D and Writers Gazette suggests he trailed Dalton, not
+    leading the operation. He was near the scene, but not the architect of the heist. "
+  suspectImage: {fileID: 21300000, guid: 5f7a181fd99e14449ae31c3bbcdf8e7f, type: 3}

@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
         {
             startupMusicSource.loop = true; // Loop the startup music
             startupMusicSource.Play();
-            SetMixerVolume("StartupMusicVolume", -10f); // Start at 80% volume
+            SetMixerVolume("StartupMusicVolume", -20f); // Start at 80% volume
         }
         if (gameplayMusicSource != null)
         {
@@ -99,7 +99,7 @@ public class AudioManager : MonoBehaviour
     private IEnumerator FadeInMusic(AudioSource audioSource, string exposedVolumeName, float duration)
     {
         audioSource.Play();
-        yield return StartCoroutine(FadeMixerGroupVolume(exposedVolumeName, -80f, -20f, duration));
+        yield return StartCoroutine(FadeMixerGroupVolume(exposedVolumeName, -80f, -30f, duration));
     }
 
     private IEnumerator FadeOutMusic(AudioSource audioSource, string exposedVolumeName, float duration)

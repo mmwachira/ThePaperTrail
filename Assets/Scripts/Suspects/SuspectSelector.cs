@@ -9,8 +9,23 @@ public class SuspectSelector : MonoBehaviour
     public GameObject accusationResultPanel;
     public TMP_Text accusationResultText;
 
+    private Suspect lastAccusedSuspect;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void AccuseSuspect(Suspect chosenSuspect)
     {
+        lastAccusedSuspect = chosenSuspect;
         if (accusationResultPanel != null && accusationResultText != null && chosenSuspect != null && correctCulprit != null)
         {
             accusationResultPanel.SetActive(true);
@@ -38,5 +53,10 @@ public class SuspectSelector : MonoBehaviour
                 accusationResultText.text = "Haha! Better luck next time detective!\n Who knows what gallery I will rob next...";
             }
         }
+    }
+
+    public Suspect GetLastAccusedSuspect()
+    {
+        return lastAccusedSuspect;
     }
 }

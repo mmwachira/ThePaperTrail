@@ -60,16 +60,4 @@ public class SuspectButton : MonoBehaviour
         }
     }
 
-    // void OnButtonClick()
-    // {
-    //     if (suspectSelector != null && suspectDataSO != null)
-    //     {
-    //         Suspect suspect = new Suspect { suspectName = suspectDataSO.suspectName };
-    //         suspectSelector.AccuseSuspect(suspect);
-    //     }
-    //     else
-    //     {
-    //         Debug.LogError("SuspectSelector not found or SuspectSO not assigned!");
-    //     }
-    // }
 }
