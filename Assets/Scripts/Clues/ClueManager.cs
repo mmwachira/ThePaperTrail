@@ -93,7 +93,7 @@ public class ClueManager : MonoBehaviour
 
     private IEnumerator ShowFinalObjective()
     {
-        AudioManager.Instance.PlayAccusationMusic();
+        //AudioManager.Instance.PlayAccusationMusic();
         UIManager.Instance.ShowWarning("Correct order!");
         yield return new WaitForSeconds(UIManager.Instance.GetWarningDuration());
         culpritchoicePanel.SetActive(true); // Show the culprit choice panel

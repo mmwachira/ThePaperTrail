@@ -13,9 +13,11 @@ public class UIManager : MonoBehaviour
     public TMP_Text winText;
     public GameObject WarningPanel;
     public TMP_Text warningText;
+    public GameObject summaryPanel;
 
     public GameObject confirmButton;
     public GameObject cancelButton;
+    public GameObject closeButton;
 
     void Awake()
     {
@@ -76,5 +78,20 @@ public class UIManager : MonoBehaviour
         yesButton.SetActive(true);
         noButton.SetActive(true);
         winPanel.SetActive(true);
+    }
+
+    public void openSummary()
+    {
+        summaryPanel.SetActive(true);
+        closeButton.SetActive(true);
+        SuspectSelector.Instance.accusationResultPanel.SetActive(false);
+    }
+
+    public void CloseSummary()
+    {
+        summaryPanel.SetActive(false);
+        closeButton.SetActive(false);
+        SuspectSelector.Instance.accusationResultPanel.SetActive(true);
+
     }
 }
