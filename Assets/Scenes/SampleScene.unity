@@ -9002,8 +9002,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 817305964}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ShowWelcome
-        m_Mode: 5
+        m_MethodName: OnNewspaperClosed
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11982,8 +11982,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 817305964}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ShowWelcome
-        m_Mode: 5
+        m_MethodName: OnNewspaperOpened
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

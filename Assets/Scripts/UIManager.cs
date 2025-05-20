@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class UIManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class UIManager : MonoBehaviour
 
     private Coroutine welcomeCoroutine;
     private bool isWelcomeShowing = false;
+    private bool tutorialComplete = false;
 
     void Awake()
     {
@@ -43,6 +45,19 @@ public class UIManager : MonoBehaviour
         WarningPanel.SetActive(false);
         isWelcomeShowing = false;
         welcomeCoroutine = null;
+    }
+
+    public void ShowTutorial(string message)
+    {
+        WarningPanel.SetActive(true);
+        warningText.text = message;
+        StartCoroutine(HideTutorial(3f)); // Hide after 3 seconds
+    }
+    private IEnumerator HideTutorial(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        WarningPanel.SetActive(false);
+
     }
 
     public void ShowObjective(string message)
@@ -112,12 +127,32 @@ public class UIManager : MonoBehaviour
 
     public void OnNewspaperOpened()
     {
-        if (isWelcomeShowing && welcomeCoroutine != null)
+        if (!tutorialComplete)
         {
-            StopCoroutine(welcomeCoroutine);
-            isWelcomeShowing = false;
-            welcomeCoroutine = null;
-            ShowWelcome("Read the newspaper carefully to find clues!");
+            // If the welcome message is showing, stop the coroutine and show the tutorial
+            // StopCoroutine(welcomeCoroutine);
+            // isWelcomeShowing = false;
+            //welcomeCoroutine = null;
+            ShowTutorial("Read the newspapers carefully to find clues!");
+        }
+        else if (tutorialComplete)
+        {
+            return; // Do nothing if the tutorial is complete
+        }
+
+    }
+
+    public void OnNewspaperClosed()
+    {
+        if (!tutorialComplete)
+        {
+            // If the tutorial is not complete, show the welcome message again
+            ShowTutorial("Click on the portraits to learn more about the suspects.");
+            tutorialComplete = true; // Mark the tutorial as complete
+        }
+        else if (tutorialComplete)
+        {
+            return; // Do nothing if the tutorial is complete
         }
     }
 
