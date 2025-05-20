@@ -42,8 +42,7 @@ public class SuspectButton : MonoBehaviour
     {
         if (suspectSelector != null && suspectDataSO != null)
         {
-            Suspect suspect = new Suspect { suspectName = suspectDataSO.suspectName };
-            suspectSelector.AccuseSuspect(suspect);
+            suspectSelector.AccuseSuspect(suspectDataSO);
         }
         else
         {

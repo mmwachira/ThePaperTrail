@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public GameObject summaryPanel;
     public TMP_Text summaryText;
     public Image summaryImage;
+    public GameObject finalCulpritSummaryPanel;
 
     public GameObject confirmButton;
     public GameObject cancelButton;
@@ -26,14 +27,7 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
     }
 
     public void ShowWelcome(string message)
@@ -80,12 +74,32 @@ public class UIManager : MonoBehaviour
         WarningPanel.SetActive(false);
     }
 
+    public void ShowWin()
+    {
+        winText.text = "Congratulations Detective! You've solved the mystery!";
+        winPanel.SetActive(true);
+    }
+
+    public void ShowLose()
+    {
+        winText.text = "Haha! Better luck next time detective!\n\nTry again?";
+        yesButton.SetActive(true);
+        noButton.SetActive(true);
+        winPanel.SetActive(true);
+    }
 
     public void openSummary()
     {
         summaryPanel.SetActive(true);
+        Suspect accused = SuspectSelector.Instance.GetLastAccusedSuspect();
+        summaryImage.sprite = accused.suspectImage;
+        summaryText.text = accused.suspectSummary;
+        Image culpritImage = finalCulpritSummaryPanel.GetComponent<Image>();
+        if (culpritImage != null)
+        {
+            culpritImage.color = accused.suspectColor;
+        }
         closeButton.SetActive(true);
-        SuspectSelector.Instance.accusationResultPanel.SetActive(false);
     }
 
     public void CloseSummary()
@@ -107,30 +121,4 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowSummary(Suspect suspectToShow)
-    {
-        // Show the summary panel
-        if (summaryPanel != null)
-        {
-
-            if (summaryPanel != null && suspectToShow != null)
-            {
-                summaryPanel.SetActive(true);
-                summaryImage.sprite = suspectToShow.suspectImage;
-                summaryText.text = suspectToShow.suspectSummary;
-                closeButton.SetActive(true);
-                SuspectSelector.Instance.accusationResultPanel.SetActive(false);
-            }
-            else
-            {
-                Debug.LogError("Suspect to show is null!");
-                return;
-            }
-
-        }
-        else
-        {
-            Debug.LogError("SummaryPanel not found!");
-        }
-    }
 }

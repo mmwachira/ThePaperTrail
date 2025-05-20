@@ -9,7 +9,7 @@ public class SuspectSelector : MonoBehaviour
     public GameObject accusationResultPanel;
     public TMP_Text accusationResultText;
 
-    private Suspect lastAccusedSuspect;
+    [SerializeField] private Suspect lastAccusedSuspect;
 
     void Awake()
     {
@@ -26,6 +26,7 @@ public class SuspectSelector : MonoBehaviour
     public void AccuseSuspect(Suspect chosenSuspect)
     {
         lastAccusedSuspect = chosenSuspect;
+        Debug.Log("Accused Suspect: " + (lastAccusedSuspect != null ? lastAccusedSuspect.suspectName : "null"));
         if (accusationResultPanel != null && accusationResultText != null && chosenSuspect != null && correctCulprit != null)
         {
             accusationResultPanel.SetActive(true);

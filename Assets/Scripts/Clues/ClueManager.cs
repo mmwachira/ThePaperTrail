@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ClueManager : MonoBehaviour
 {
+    public static ClueManager Instance;
+
     public ClueCard[] clueCards; // draggable clue objects
     public RectTransform[] targetZones; // invisible placeholder areas
     public int[] correctIDs;  // correct clue order
@@ -12,6 +14,18 @@ public class ClueManager : MonoBehaviour
     public float snapDistanceThreshold = 50f; // distance threshold for snapping
 
     private ClueCard[] snappedClues; // Keep track of which clue is snapped to which target
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {

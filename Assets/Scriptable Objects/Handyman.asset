@@ -22,3 +22,4 @@ MonoBehaviour:
     inside undetected during the theft. All signs point to him \u2014 and you connected
     the clues. "
   suspectImage: {fileID: 21300000, guid: 2774b85939d1d6f4990c51bc1f0ae3ad, type: 3}
+  suspectColor: {r: 0.17605983, g: 0.5773585, b: 0.16013527, a: 1}
