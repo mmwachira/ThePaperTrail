@@ -133,7 +133,7 @@ public class UIManager : MonoBehaviour
             // StopCoroutine(welcomeCoroutine);
             // isWelcomeShowing = false;
             //welcomeCoroutine = null;
-            ShowTutorial("Read the newspapers carefully to find clues!");
+            ShowTutorial("Read the newspapers carefully to find clues!\n Zoom in using the scroll wheel or pinch to zoom.");
         }
         else if (tutorialComplete)
         {
