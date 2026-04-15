@@ -29,48 +29,62 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void ShowWarningMessage(string message, float duration = 3f)
+    {
+        if (welcomeCoroutine != null)
+        {
+            StopCoroutine(welcomeCoroutine);
+        }
+
+        WarningPanel.SetActive(true);
+        warningText.text = message;
+        welcomeCoroutine = StartCoroutine(HideWarning(duration));
+    }
+
+    private IEnumerator HideWarning(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        WarningPanel.SetActive(false);
+        welcomeCoroutine = null;
     }
 
     public void ShowWelcome(string message)
     {
-        WarningPanel.SetActive(true);
-        warningText.text = message;
-        isWelcomeShowing = true;
-        welcomeCoroutine = StartCoroutine(HideWelcome(3f)); // Hide after 3 seconds
+        ShowWarningMessage(message, 3f); // Hide after 3 seconds
     }
-    private IEnumerator HideWelcome(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        WarningPanel.SetActive(false);
-        isWelcomeShowing = false;
-        welcomeCoroutine = null;
-    }
+    // private IEnumerator HideWelcome(float delay)
+    // {
+    //     HideWarning(delay);
+    // }
 
     public void ShowTutorial(string message)
     {
-        WarningPanel.SetActive(true);
-        warningText.text = message;
-        StartCoroutine(HideTutorial(3f)); // Hide after 3 seconds
+        ShowWarningMessage(message, 3f); // Hide after 3 seconds
     }
-    private IEnumerator HideTutorial(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        WarningPanel.SetActive(false);
+    // private IEnumerator HideTutorial(float delay)
+    // {
+    //     HideWarning(delay);
 
-    }
+    // }
 
     public void ShowObjective(string message)
     {
-        WarningPanel.SetActive(true);
-        warningText.text = message;
-        StartCoroutine(HideObjective(3f)); // Hide after 3 seconds
+        ShowWarningMessage(message, 3f); // Hide after 3 seconds
     }
-    private IEnumerator HideObjective(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        WarningPanel.SetActive(false);
-    }
+    // private IEnumerator HideObjective(float delay)
+    // {
+    //     HideWarning(delay);
+    // }
 
     public float GetWarningDuration()
     {
@@ -78,16 +92,14 @@ public class UIManager : MonoBehaviour
     }
     public void ShowWarning(string message)
     {
-        WarningPanel.SetActive(true);
-        warningText.text = message;
-        StartCoroutine(HideWarning(1f)); // Hide after 1 second
+        ShowWarningMessage(message, 1f); // Hide after 1 second
     }
 
-    private IEnumerator HideWarning(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        WarningPanel.SetActive(false);
-    }
+    // private IEnumerator HideWarning(float delay)
+    // {
+    //     yield return new WaitForSeconds(delay);
+    //     WarningPanel.SetActive(false);
+    // }
 
     public void ShowWin()
     {
@@ -97,16 +109,23 @@ public class UIManager : MonoBehaviour
 
     public void ShowLose()
     {
+        if (winText == null || winPanel == null) return; // Safety check to avoid null reference errors
         winText.text = "Haha! Better luck next time detective!\n\nTry again?";
-        yesButton.SetActive(true);
-        noButton.SetActive(true);
+        yesButton?.SetActive(true);
+        noButton?.SetActive(true);
         winPanel.SetActive(true);
     }
 
-    public void openSummary()
+    public void OpenSummary()
     {
+        Suspect accused = SuspectSelector.Instance?.GetLastAccusedSuspect();
+        if (accused == null)
+        {
+            Debug.LogError("No suspect was accused. Cannot open summary.");
+            return;
+        }
+
         summaryPanel.SetActive(true);
-        Suspect accused = SuspectSelector.Instance.GetLastAccusedSuspect();
         summaryImage.sprite = accused.suspectImage;
         summaryText.text = accused.suspectSummary;
         Image culpritImage = finalCulpritSummaryPanel.GetComponent<Image>();
@@ -129,13 +148,9 @@ public class UIManager : MonoBehaviour
     {
         if (!tutorialComplete)
         {
-            // If the welcome message is showing, stop the coroutine and show the tutorial
-            // StopCoroutine(welcomeCoroutine);
-            // isWelcomeShowing = false;
-            //welcomeCoroutine = null;
             ShowTutorial("Read the newspapers carefully to find clues!\n Zoom in using the scroll wheel or pinch to zoom.");
         }
-        else if (tutorialComplete)
+        else
         {
             return; // Do nothing if the tutorial is complete
         }

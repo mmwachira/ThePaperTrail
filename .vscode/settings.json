@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ThePaperTrail.sln"
+    "dotnet.defaultSolution": "ThePaperTrail.slnx"
 }
